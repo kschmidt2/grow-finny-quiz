@@ -90,8 +90,8 @@
         quizHtml += '<div id="quiz-controls">';
         quizHtml += '<p id="quiz-response"></p>';
         quizHtml += '<div id="quiz-buttons">';
-        quizHtml += '<a href="#" id="quiz-next-btn">' + nextButtonText + '</a>';
-        quizHtml += '<a href="#" id="quiz-finish-btn">' + finishButtonText + '</a>';
+        quizHtml += '<a href="#" id="quiz-next-btn" class="quiz-right-btn">' + nextButtonText + '</a>';
+        quizHtml += '<a href="#" id="quiz-finish-btn" class="quiz-right-btn">' + finishButtonText + '</a>';
         quizHtml += '<a href="#" id="quiz-restart-btn">' + restartButtonText + '</a>';
         quizHtml += '</div>';
         quizHtml += '</div>';
@@ -256,7 +256,7 @@
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Next',
     finishButtonText: 'Finish',
-    restartButtonText: 'Restart'
+    restartButtonText: 'Try again'
   };
 
   $.fn.quiz = function(options) {
