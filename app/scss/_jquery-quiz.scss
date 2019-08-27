@@ -1,0 +1,92 @@
+.quiz-container {
+    max-width: 100%;
+    margin: 1em auto;
+    font-size: 18px;
+}
+
+.quiz-container a {
+    text-decoration: none;
+    color: #333;
+}
+
+#quiz-header,
+#quiz-start-screen,
+#quiz-results-screen,
+#quiz-counter {
+
+}
+
+#quiz-counter {
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: $slate-secondary-5;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answers {
+    list-style: none;
+    padding: 0;
+}
+
+.answers a {
+    display: block;
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    background: $slate-secondary-2;
+    border: 0;
+    border-radius: 5px;
+    &:hover {
+        background-color: $green-secondary-2;
+    }
+    &.correct {
+        background: $green-primary;
+    }
+    &.incorrect {
+        background: $slate-primary;
+    }
+}
+
+.answers a.correct,
+.answers a.incorrect {
+    color: #fff;
+}
+
+#quiz-controls {
+    margin-top: 20px;
+    & #quiz-buttons {
+        float: right;
+    }
+}
+
+#quiz-response {
+    margin-bottom: 10px;
+}
+#quiz-results {
+    font-size: 24px;
+}
+
+#quiz-buttons a,
+.quiz-container .quiz-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid $slate-secondary-3;
+}
+#quiz-buttons a {
+    background: #fff;
+}
+
+/* Quiz State Overrides */
+
+.quiz-results-state #quiz-controls {
+    background: none;
+    padding: 0;
+}
+.quiz-results-state #quiz-buttons a {
+    background: #fff;
+}

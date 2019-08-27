@@ -14,96 +14,69 @@ let subhead = document.getElementsByClassName("chart-subhead"),
         }       
      }
 
-Highcharts.setOptions({
-    lang: {
-      thousandsSep: ','
+
+const myQuiz = [
+    {
+    'q': 'A sample question 1?',
+    'options': [
+        'Answer 1',
+        'Answer 2',
+        'Answer 3',
+        'Answer 4'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+    },
+    {
+    'q': 'A sample question 2?',
+    'options': [
+        'Answer 1',
+        'Answer 2'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+    },
+    {
+    'q': 'A smaple question 3?',
+    'options': [
+        'Answer 1',
+        'Answer 2',
+        'Answer 3',
+        'Answer 4'
+    ],
+    'correctIndex': 2,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+    },
+    {
+    'q': 'A smaple question 4?',
+    'options': [
+        'Answer 1',
+        'Answer 2'
+    ],
+    'correctIndex': 1,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
+    },
+    {
+    'q': 'A smaple question 5?',
+    'options': [
+        'Answer 1',
+        'Answer 2',
+        'Answer 3',
+        'Answer 4'
+    ],
+    'correctIndex': 3,
+    'correctResponse': 'Custom correct response.',
+    'incorrectResponse': 'Custom incorrect response.'
     }
+]
+
+$('#quiz').quiz({
+    questions: myQuiz,
+    counterFormat: 'Question %current of %total'
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const myChart = Highcharts.chart('chart-container', {
-        chart: {
-            type: 'bar',
-            styledMode: true,
-            spacingBottom: 25,
-            spacingRight: 100
-        }, 
-        title: {
-            text: null
-        },
-        data: {
-            googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
-        },
-        // for bar charts only
-        plotOptions: {
-            series: {
-                groupPadding: 0.1
-            } 
-        },
-        // for line charts only
-        // plotOptions: {
-        //     series: {
-        //         lineWidth: 1,
-        //         // clip: false,
-        //         marker: {
-        //             enabled: false,
-        //             symbol: 'circle',
-        //             fillColor: '#ffffff',
-        //             states: {
-        //                 hover: {
-        //                     fillColor: '#ffffff'
-        //                 }
-        //             }
-        //         }
-        //     }
-        // },
-        legend: {
-            align: 'right',
-            symbolRadius: 0,
-            verticalAlign: 'top',
-            x: 10,
-            itemMarginTop: -10
-        },
-        xAxis: {
-            labels: {
-                style: {
-                    whiteSpace: 'nowrap'
-                }
-            },
-            tickLength: 5
-        },
-        yAxis: {
-            title: false,
-            labels: {
-                useHTML: true,
-                overflow: 'allow'
-            }
-        },
-        credits: {
-            enabled: false
-        },
-        tooltip: {
-            shadow: false,
-            padding: 10
-        },
-        responsive: {
-            rules: [{
-              condition: {
-                maxWidth: 500
-              },
-              chartOptions: {
-                chart: {
-                  spacingRight: 10
-                },
-                legend: {
-                    align: 'left',
-                    x: -18
-                },
-                tooltip: {
-                    enabled: false
-                }
-              }
-            }]
-        }
-    });
-});
+    
