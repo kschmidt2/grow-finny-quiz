@@ -41,15 +41,16 @@
     padding: 0;
 }
 
-.answers a {
+.answers li {
     display: block;
     padding: 0.5em 1em;
     margin-bottom: 0.5em;
     background: $slate-secondary-2;
     border: 0;
     color: black;
-    &:hover {
+    &:not(.no-hover):hover {
         background-color: $green-secondary-2;
+        cursor: pointer;
     }
     &.correct {
         background: $green-primary;
@@ -64,29 +65,40 @@
     color: #fff;
 }
 
-.quiz-controls {
+.quiz-responses {
     margin-top: 20px;
     margin-bottom: 50px;
+    // display: none;
+}
+
+.incorrect-response, .correct-response {
     display: none;
 }
 
-#quiz-response {
-    margin-bottom: 10px;
-}
 .quiz-results {
     margin-top: 50px;
     font-size: 24px;
     display: none;
 }
 
-#quiz-buttons a,
-.quiz-container .quiz-button {
-    display: inline-block;
+.quiz-button {
+    display: none;
     padding: 0.5em 1em;
     border: 1px solid $slate-secondary-3;
+    width: 90px;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+        background-color: $slate-secondary-2;
+    }
 }
 #quiz-buttons a {
     background: #fff;
+}
+
+#quiz-score {
+    color: $green-primary;
+    font-weight: 600;
 }
 
 /* Quiz State Overrides */

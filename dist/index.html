@@ -27,12 +27,15 @@
             1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?
           </div>
           <ul class="answers">
-            <li><a href="#" data-correct="true">Answer 1</a></li>
-            <li><a href="#" data-correct="false">Answer 2</a></li>
-            <li><a href="#" data-correct="false">Answer 3</a></li>
-            <li><a href="#" data-correct="false">Answer 4</a></li>
+            <li data-correct="true">Answer 1</li>
+            <li data-correct="false">Answer 2</li>
+            <li data-correct="false">Answer 3</li>
+            <li data-correct="false">Answer 4</li>
           </ul>
-          <div class="quiz-controls"></div>
+          <div class="quiz-responses">
+              <div class="correct-response">That's correct!</div>
+              <div class="incorrect-response">Too bad!</div>
+            </div>
         </div>
 
         <div id="question-container-2" class="question-container">
@@ -40,12 +43,15 @@
               2. Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?
             </div>
             <ul class="answers">
-                <li><a href="#" data-correct="true">Answer 1</a></li>
-                <li><a href="#" data-correct="false">Answer 2</a></li>
-                <li><a href="#" data-correct="false">Answer 3</a></li>
-                <li><a href="#" data-correct="false">Answer 4</a></li>
+                <li data-correct="true">Answer 1</li>
+                <li data-correct="false">Answer 2</li>
+                <li data-correct="false">Answer 3</li>
+                <li data-correct="false">Answer 4</li>
             </ul>
-            <div class="quiz-controls"></div>
+            <div class="quiz-responses">
+                <div class="correct-response">That's correct!</div>
+                <div class="incorrect-response">Too bad!</div>
+              </div>
           </div>
 
           <div id="question-container-3" class="question-container">
@@ -53,12 +59,15 @@
               3. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             </div>
             <ul class="answers">
-                <li><a href="#" data-correct="true">Answer 1</a></li>
-                <li><a href="#" data-correct="false">Answer 2</a></li>
-                <li><a href="#" data-correct="false">Answer 3</a></li>
-                <li><a href="#" data-correct="false">Answer 4</a></li>
+                <li data-correct="true">Answer 1</li>
+                <li data-correct="false">Answer 2</li>
+                <li data-correct="false">Answer 3</li>
+                <li data-correct="false">Answer 4</li>
             </ul>
-            <div class="quiz-controls"></div>
+            <div class="quiz-responses">
+                <div class="correct-response">That's correct!</div>
+                <div class="incorrect-response">Too bad!</div>
+              </div>
           </div>
 
           <div id="question-container-4" class="question-container">
@@ -66,12 +75,15 @@
               4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua?
             </div>
             <ul class="answers">
-                <li><a href="#" data-correct="true">Answer 1</a></li>
-                <li><a href="#" data-correct="false">Answer 2</a></li>
-                <li><a href="#" data-correct="false">Answer 3</a></li>
-                <li><a href="#" data-correct="false">Answer 4</a></li>
+                <li data-correct="true">Answer 1</li>
+                <li data-correct="false">Answer 2</li>
+                <li data-correct="false">Answer 3</li>
+                <li data-correct="false">Answer 4</li>
             </ul>
-            <div class="quiz-controls"></div>
+            <div class="quiz-responses">
+                <div class="correct-response">That's correct!</div>
+                <div class="incorrect-response">Too bad!</div>
+              </div>
           </div>
 
           <div id="question-container-5" class="question-container">
@@ -79,16 +91,23 @@
               5. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </div>
             <ul class="answers">
-                <li><a href="#" data-correct="true">Answer 1</a></li>
-                <li><a href="#" data-correct="false">Answer 2</a></li>
-                <li><a href="#" data-correct="false">Answer 3</a></li>
-                <li><a href="#" data-correct="false">Answer 4</a></li>
+                <li data-correct="true">Answer 1</li>
+                <li data-correct="false">Answer 2</li>
+                <li data-correct="false">Answer 3</li>
+                <li data-correct="false">Answer 4</li>
             </ul>
-            <div class="quiz-controls"></div>
+            <div class="quiz-responses">
+              <div class="correct-response">That's correct!</div>
+              <div class="incorrect-response">Too bad!</div>
+            </div>
+          </div>
+
+          <div class="quiz-button">
+            See Results
           </div>
 
           <div class="quiz-results">
-            You got <span id="quiz-score">_</span> out of 5 right!
+            You got <span id="quiz-score">_</span> out of 5 right.
             <div id="quiz-results-explanation"></div>
           </div>
 

@@ -79,34 +79,40 @@ let subhead = document.getElementsByClassName("chart-subhead"),
 //     counterFormat: 'Question %current of %total'
 // });
 
+let score = 0; //total score for final results
+
 function answerQuestion(questionContainer) {
-    let questions = $('.question-container'),
-        score = 0,
-        answerLocked = false,
-        response = '',
-        correctResponse = 'That\'s correct!',
-        incorrectResponse = 'Too bad!';
+    let answerLocked = false //controls whether the question should be locked after answering
 
-        for (i = 0; i < questions.length; i++) { 
-            console.log(questions);
-        }
-        console.log(questionContainer);
-
-    $(questionContainer + ' .answers li a').on('click', function(){
+    $(questionContainer + ' .answers li').on('click', function(){
         if (answerLocked) {
             return;
         }
-            answerLocked = true;
+        answerLocked = true;
+
+        $(this).parent().addClass("clicked");
+
         if (this.dataset.correct == "true") {
             $(this).addClass("correct");
             score++;
-            response = correctResponse;
+            $(questionContainer + ' .quiz-responses .correct-response').slideDown(200);
         } else if (this.dataset.correct == "false") {
             $(this).addClass("incorrect");
-            response = incorrectResponse;
+            $(questionContainer + ' .quiz-responses .incorrect-response').slideDown(200);
         }
 
-        $(questionContainer + ' .quiz-controls').html(response).slideDown(200);
+        $(questionContainer + ' .answers li').addClass('no-hover');
+
+        // shows 'see results' button after all five questions have been answered
+        if ($(".answers").length == $(".answers.clicked").length)
+        {
+            $('.quiz-button').fadeIn(200);
+        }
+
+        $('.quiz-button').on('click', function () {
+            $('.quiz-results').slideDown(200);
+            $('#quiz-score').html(score);
+        })
     })
 
 }
@@ -115,5 +121,4 @@ $('.answers').one('mouseover', function(){
     let parentDiv = ($(this).parent().attr('id'))
     answerQuestion('#' + parentDiv);
 })
-
     
