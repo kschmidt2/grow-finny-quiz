@@ -60,11 +60,6 @@
     }
 }
 
-.answers a.correct,
-.answers a.incorrect {
-    color: #fff;
-}
-
 .quiz-responses {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -73,6 +68,15 @@
 
 .incorrect-response, .correct-response {
     display: none;
+    font-weight: 600;
+}
+
+.correct-response {
+    color: $green-primary;
+}
+
+.incorrect-response {
+    color: $slate-secondary-4;
 }
 
 .quiz-results {
