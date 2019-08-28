@@ -34,6 +34,8 @@
 
 .question {
     margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 30px;
 }
 
 .answers {
@@ -69,6 +71,7 @@
 .incorrect-response, .correct-response {
     display: none;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .correct-response {
@@ -77,6 +80,11 @@
 
 .incorrect-response {
     color: $slate-secondary-4;
+}
+
+.response-explanation {
+    display: none;
+    line-height: 30px;
 }
 
 .quiz-results {

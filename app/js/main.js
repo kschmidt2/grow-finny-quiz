@@ -101,6 +101,8 @@ function answerQuestion(questionContainer) {
             $(questionContainer + ' .quiz-responses .incorrect-response').slideDown(200);
         }
 
+        $(questionContainer + ' .quiz-responses .response-explanation').slideDown(200);
+
         $(questionContainer + ' .answers li').addClass('no-hover');
 
         // shows 'see results' button after all five questions have been answered
