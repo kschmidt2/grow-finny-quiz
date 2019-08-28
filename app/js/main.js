@@ -106,15 +106,24 @@ function answerQuestion(questionContainer) {
         $(questionContainer + ' .answers li').addClass('no-hover');
 
         // shows 'see results' button after all five questions have been answered
-        if ($(".answers").length == $(".answers.clicked").length)
-        {
-            $('.quiz-button').fadeIn(200);
-        }
-
-        $('.quiz-button').on('click', function () {
+        if ($(".answers").length == $(".answers.clicked").length) {
             $('.quiz-results').slideDown(200);
             $('#quiz-score').html(score);
-        })
+
+            if (score == 0 || score == 1) {
+                $('#quiz-advice').html("Looks like you would benefit from additional reading.");
+            } else if (score == 2) {
+                $('#quiz-advice').html("You know some things, and we want to help you learn even more.");
+            } else if (score == 3) {
+                $('#quiz-advice').html("You got the same number right as the average person, which is a great start, but we want to help you learn even more.");
+            } else if (score == 4) {
+                $('#quiz-advice').html("You got more questions right than the average person, which is great, but we want to help you learn even more.");
+            } else if (score == 5) {
+                $('#quiz-advice').html("Great job! You know your stuff, but we want to help you learn even more.");
+            } else if (score == 6) {
+                $('#quiz-advice').html("Perfect! You know your stuff, but we want to help you learn even more.");
+            }
+        }
     })
 
 }
