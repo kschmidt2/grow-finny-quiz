@@ -111,13 +111,13 @@ function answerQuestion(questionContainer) {
             $('#quiz-score').html(score);
 
             if (score == 0 || score == 1) {
-                $('#quiz-advice').html("Looks like you would benefit from additional reading.");
+                $('#quiz-advice').html("Looks like you would benefit from additional reading. Knowing where you have knowledge gaps gives you a good idea of where to start learning.");
             } else if (score == 2) {
-                $('#quiz-advice').html("You know some things, and we want to help you learn even more.");
+                $('#quiz-advice').html("You’re working on your financial literacy skills, and we want to help you learn even more.");
             } else if (score == 3) {
-                $('#quiz-advice').html("You got the same number right as the average person, which is a great start, but we want to help you learn even more.");
+                $('#quiz-advice').html("You got the same number correct as the average person. You’re on the right track, and we want to help you learn even more.");
             } else if (score == 4) {
-                $('#quiz-advice').html("You got more questions right than the average person, which is great, but we want to help you learn even more.");
+                $('#quiz-advice').html("You got more than half the questions right. That’s great, but we want to help you learn even more.");
             } else if (score == 5) {
                 $('#quiz-advice').html("Great job! You know your stuff, but we want to help you learn even more.");
             } else if (score == 6) {
