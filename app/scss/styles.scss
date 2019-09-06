@@ -24,7 +24,7 @@ $breakpoint-lg: 717px;
 @import "colors";
 
 .chart-area {
-  @import "type";
+  $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
   @import "jquery-quiz";
 
   max-width: 660px;
@@ -57,6 +57,13 @@ $breakpoint-lg: 717px;
 
   & .intro p {
     margin-bottom: 20px;
+  }
+
+  & #quiz-results-explanation {
+    & a {
+      font-weight: 600;
+      color: $green-primary;
+    }
   }
   
 }
