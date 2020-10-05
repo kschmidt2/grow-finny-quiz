@@ -115,11 +115,11 @@ function answerQuestion(questionContainer) {
 
             if (score == 0 || score == 1 || score == 2 || score == 3 || score == 4 || score == 5) {
                 $('#quiz-advice').html("Here are some resources to help you learn more.");
-            } else if (score == 6 || score == 7) {
+            } else if (score == 4) {
                 $('#quiz-advice').html("Good job! Here are some resources to help you learn even more.");
-            } else if (score == 8 || score == 9) {
+            } else if (score == 5) {
                 $('#quiz-advice').html("Great job! You know your stuff, but here are some resources to help you learn even more.");
-            } else if (score == 10) {
+            } else if (score == 6) {
                 $('#quiz-advice').html("Perfect! You know your stuff, but here are some resources to help you learn even more.");
             }
         }

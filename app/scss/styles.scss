@@ -20,7 +20,7 @@ $breakpoint-lg: 717px;
   }
 }
 
-@import "css-reset";
+// @import "css-reset";
 @import "colors";
 
 .chart-area {
@@ -61,7 +61,7 @@ $breakpoint-lg: 717px;
 
   & #quiz-results-explanation {
     & a {
-      font-weight: 600;
+      font-weight: 700;
       color: $green-primary;
     }
   }
