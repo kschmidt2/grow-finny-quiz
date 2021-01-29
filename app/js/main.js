@@ -5,14 +5,6 @@
 //     element[i].className += " social";
 // }
 
-// bolds the subhead if there is no headline
-let subhead = document.getElementsByClassName("chart-subhead"),
-    headline = document.getElementById("chart-head");
-    if (!headline) {
-        for(var i = 0; i < subhead.length; i++) {
-            subhead[i].style.fontWeight = "600";
-        }       
-     }
 
 
 // const myQuiz = [
@@ -87,7 +79,7 @@ function answerQuestion(questionContainer) {
     $(questionContainer + ' .answers li').on('click', function(){
         if (answerLocked) {
             return;
-        }
+        }``
         answerLocked = true;
 
         $(this).parent().addClass("clicked");
@@ -98,6 +90,8 @@ function answerQuestion(questionContainer) {
             $(questionContainer + ' .quiz-responses .correct-response').slideDown(200);
         } else if (this.dataset.correct == "false") {
             $(this).addClass("incorrect");
+            let parent = $(this).parent();
+            parent.find('[data-correct="true"]').addClass('correct');
             $(questionContainer + ' .quiz-responses .incorrect-response').slideDown(200);
         }
 
@@ -114,11 +108,11 @@ function answerQuestion(questionContainer) {
             $('#quiz-score').html(score);
 
             if (score == 0 || score == 1 || score == 2 || score == 3) {
-                $('#quiz-advice').html("Here are some resources to help you learn more.");
+                $('#quiz-advice').html("You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
             } else if (score == 4) {
-                $('#quiz-advice').html("Good job! Here are some resources to help you learn even more.");
+                $('#quiz-advice').html("Good job! You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
             } else if (score == 5) {
-                $('#quiz-advice').html("Perfect! You know your stuff. Here are some resources to help you learn even more.");
+                $('#quiz-advice').html("Perfect! You know your stuff. You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
             // } else if (score == 6) {
             //     $('#quiz-advice').html("Perfect! You know your stuff, but here are some resources to help you learn even more.");
             }
