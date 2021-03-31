@@ -108,11 +108,11 @@ function answerQuestion(questionContainer) {
             $('#quiz-score').html(score);
 
             if (score == 0 || score == 1 || score == 2 || score == 3) {
-                $('#quiz-advice').html("You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
+                $('#quiz-advice').html("Here are some resources to help you learn more.");
             } else if (score == 4) {
-                $('#quiz-advice').html("Good job! You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
+                $('#quiz-advice').html("Good job! Here are some resources to help you learn even more.");
             } else if (score == 5) {
-                $('#quiz-advice').html("Perfect! You know your stuff. You can review all of this month's news on our <a href='https://grow.acorns.com/news/'>News You Can Use page<a/>.");
+                $('#quiz-advice').html("Perfect! You know your stuff. Here are some resources to help you learn even more.");
             // } else if (score == 6) {
             //     $('#quiz-advice').html("Perfect! You know your stuff, but here are some resources to help you learn even more.");
             }
